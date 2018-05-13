@@ -1,0 +1,16 @@
+.Agenda-dates {
+  display: flex;
+}
+
+.Agenda-date {
+  padding: 4px;
+  margin: 4px 0;
+}
+
+.Agenda-date:hover {
+  border-bottom: 2px solid black;
+}
+
+.Agenda-date.selected {
+  border-bottom: 2px solid black;
+}

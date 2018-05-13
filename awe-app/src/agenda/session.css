@@ -1,0 +1,28 @@
+.Session {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid black;
+  background-color: white;
+  margin: 2px;
+  padding: 2px;
+}
+
+.Session:hover {
+  background-color: lightgrey;
+}
+
+.Session-title {
+  margin: 2px 0;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.Session-time {
+  margin: 2px 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.Session-details {
+  font-size: 0.7em;
+}
