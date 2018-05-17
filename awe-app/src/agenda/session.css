@@ -7,7 +7,7 @@
   padding: 2px;
 }
 
-.Session:hover {
+.Session:hover, .Session.in-agenda:hover {
   background-color: lightgrey;
 }
 
@@ -25,4 +25,9 @@
 
 .Session-details {
   font-size: 0.7em;
+}
+
+.Session.in-agenda {
+  border: 1px solid green;
+  background-color: lightgreen;
 }

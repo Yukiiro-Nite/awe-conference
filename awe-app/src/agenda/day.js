@@ -19,7 +19,7 @@ class Day extends Component {
     this.setState({session: undefined});
   }
   render() {
-    const { day } = this.props;
+    const { day, myAgenda, addToAgenda, removeFromAgenda } = this.props;
     const sessionsByTrack = day.sessions.reduce((acc, session) => {
       session.tracks.forEach(track => {
         if(!acc[track.name]) {
@@ -36,10 +36,23 @@ class Day extends Component {
       <div className="Day">
         <div className="Day-tracks">
           {
-            tracks.map(track => <Track key={track} track={track} sessions={sessionsByTrack[track]} showSessionModal={this.showSessionModal}/>)
+            tracks.map(track => <Track
+                key={track}
+                track={track}
+                sessions={sessionsByTrack[track]}
+                showSessionModal={this.showSessionModal}
+                myAgenda={myAgenda}
+              />
+            )
           }
         </div>
-        <SessionModal session={this.state.session} closeSessionModal={this.closeSessionModal} />
+        <SessionModal
+          session={this.state.session}
+          closeSessionModal={this.closeSessionModal}
+          myAgenda={myAgenda}
+          addToAgenda={addToAgenda}
+          removeFromAgenda={removeFromAgenda}
+        />
       </div>
     )
   }
